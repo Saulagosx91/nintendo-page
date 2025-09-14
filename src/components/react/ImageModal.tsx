@@ -13,12 +13,12 @@ export function ImageModal() {
   }
 
   return (
-    <div className={`w-[120%] h-[140%] overflow-hidden md:w-full md:h-full absolute backdrop-blur-xl top-0 grid place-items-center z-30 ${!modal && 'hidden'}`} onClick={(e) => {
+    <div className={`w-[120%] h-[140%] overflow-hidden md:w-full md:h-full absolute backdrop-blur-xl top-0 z-30 ${!modal && 'hidden'}`} onClick={(e) => {
       if (e.target === e.currentTarget) {
         handleClick();
       }
     }}>
-      <div className="w-[95%] md:w-[600px] h-[400px] animate-jump-in animate-ease-out mx-auto">
+      <div className="w-[95%] md:w-[600px] h-[400px] animate-jump-in animate-ease-out mx-auto mt-10">
         <button onClick={(e) => {
           e.stopPropagation();
           handleClick();
