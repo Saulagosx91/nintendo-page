@@ -1,0 +1,52 @@
+---
+import SwiperImages from "./react/Swiper";
+---
+
+<main
+  class="bg-sky-blue w-full h-auto min-h-[750px] relative flex justify-center mt-8"
+>
+  <section
+    class="bg-white rounded-lg h-auto min-h-[700px] w-[90%] mx-auto absolute top-10 shadow-2xl grid grid-cols-2 grid-rows-2 gap-4 p-10"
+    style="grid-template-rows: 70% 30%; grid-template-columns: 60% 40%;"
+    id="section-game-info"
+  >
+    <div>
+      <SwiperImages client:load />
+    </div>
+
+    <div class="px-5 flex flex-col gap-4 text-gray">
+      <h2 class="text-3xl font-bold">Stardew Valley</h2>
+      <span class="font-bold">Version</span>
+      <span class="font-bold">Edition</span>
+
+      <div class="flex w-full justify-between mt-4 text-3xl font-bold">
+        <h2>$14.99</h2>
+        <span>❤️</span>
+      </div>
+
+      <button
+        class="w-full bg-red h-14 rounded mt-4 text-white font-bold text-xl cursor-pointer hover:bg-red-900 transition hover:scale-105"
+        >Direct download</button
+      >
+      <p class="text-xs">
+        This item will be sent to your system automatically after purchase.
+      </p>
+    </div>
+
+    <div
+      class="bg-gray-200 rounded-lg flex flex-col justify-evenly px-4 text-gray"
+    >
+      <p class="font-bold">Nintendo Switch 2 Compatibility Information</p>
+      <p>Supported – Game behavior is consistent with Nintendo Switch.</p>
+    </div>
+  </section>
+</main>
+
+<style>
+  @media (max-width: 768px) {
+    #section-game-info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

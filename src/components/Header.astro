@@ -1,0 +1,88 @@
+---
+import Logo from "./Logo.astro";
+import MenuLogo from "./MenuLogo.astro";
+import CloseIcon from "./CloseIcon.astro";
+---
+
+<header class="bg-white w-full h-28 flex flex-col">
+  <div
+    class="flex h-14 justify-between w-full border border-b-gray-300 overflow-hidden"
+  >
+    <div class="flex gap-8 h-14">
+      <Logo />
+      <nav class="hidden gap-4 items-center text-gray font-bold md:flex">
+        <a href="#">Explore</a>
+        <a href="#">Shop</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+
+    <div
+      class="gap-8 h-14 text-gray font-bold items-center pr-4 hidden md:flex"
+    >
+      <button class="border-none">Search</button>
+      <button class="border border-red rounded-3xl w-40 h-8 text-red"
+        >Log in / Sign up</button
+      >
+    </div>
+
+    <div class="flex cursor-pointer w-20 items-center md:hidden" id="menu-logo">
+      <MenuLogo />
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <section
+    class="w-full bg-red-transparent text-center h-[100%] z-10 fixed top-0 py-3 hidden animate-fade-down animate-once animate-ease-in animate-duration-500"
+    id="menu-mobile-section"
+  >
+    <CloseIcon />
+    <nav
+      class="flex flex-col items-center justify-around h-full text-white font-bold"
+    >
+      <a href="#">Explore</a>
+      <a href="#">Shop</a>
+      <a href="#">Support</a>
+      <a href="#">Home</a>
+      <a href="#">Log in / Sign up</a>
+    </nav>
+  </section>
+
+  <div class="flex items-center justify-evenly h-14 text-gray">
+    <p>
+      <strong>Free shipping</strong> on orders $50 or more. <strong
+        >Restrictions apply</strong
+      >
+    </p>
+    <span class="text-gray-400 hidden md:block">|</span>
+    <p class="hidden md:block">
+      Reddem your <strong>My Nintendo Platinum Points</strong> for <strong
+        >fun rewards</strong
+      >
+    </p>
+  </div>
+</header>
+
+<style>
+  .display-mobile-menu {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerMenu = document.getElementById("menu-logo");
+    const mobileMenu = document.getElementById("menu-mobile-section");
+    const buttonCloseMenu = document.getElementById("close-mobile-menu");
+
+    if (hamburgerMenu) {
+      hamburgerMenu.addEventListener("click", () => {
+        mobileMenu?.classList.add("display-mobile-menu");
+      });
+
+      buttonCloseMenu?.addEventListener("click", () => {
+        mobileMenu?.classList.remove("display-mobile-menu");
+      });
+    }
+  });
+</script>
