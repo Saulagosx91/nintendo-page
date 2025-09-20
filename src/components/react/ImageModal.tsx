@@ -18,7 +18,7 @@ export function ImageModal() {
         handleClick();
       }
     }}>
-      <div className="w-[95%] md:w-[600px] h-[400px] animate-jump-in animate-ease-out mx-auto mt-10">
+      <div className="w-[95%] md:w-[600px] h-[300px] md:h-[400px] animate-jump-in animate-ease-out mx-auto mt-10">
         <button onClick={(e) => {
           e.stopPropagation();
           handleClick();
