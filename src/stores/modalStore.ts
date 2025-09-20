@@ -19,6 +19,6 @@ export const useModal = create<ModalState>()((set) => ({
   imageUrl: '',
   setImageUrl: (url) => set(() => ({ imageUrl: url })),
   toggleModal: () => set((state) => ({ modal: !state.modal })),
-  blockScroll: () => window.addEventListener('scroll', preventScroll, { passive: false }),
-  enableScroll: () => window.removeEventListener('scroll', preventScroll)
+  blockScroll: () => { window.addEventListener('scroll', preventScroll); document.body.style.overflow = 'hidden' },
+  enableScroll: () => { window.removeEventListener('scroll', preventScroll); document.body.style.overflow = 'visible' }
 }));
