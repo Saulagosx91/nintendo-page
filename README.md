@@ -10,7 +10,9 @@ npm create astro@latest -- --template basics
 These are the reference links of the project:
 
 [View the project live](https://nintendo-page.netlify.app/)
+
 [View the original page](https://www.nintendo.com/us/store/products/stardew-valley-switch/)
+
 [View the project challenge](https://www.frontendpractice.com/projects/nintendo)
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
